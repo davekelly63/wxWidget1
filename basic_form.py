@@ -30,11 +30,13 @@ class basic_frame ( wx.Frame ):
 
 		bSizer21 = wx.BoxSizer( wx.HORIZONTAL )
 
+		bSizerLeft = wx.BoxSizer( wx.VERTICAL )
+
 		self.m_grid1 = wx.grid.Grid( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, 0 )
 
 		# Grid
 		self.m_grid1.CreateGrid( 30, 2 )
-		self.m_grid1.EnableEditing( True )
+		self.m_grid1.EnableEditing( False )
 		self.m_grid1.EnableGridLines( True )
 		self.m_grid1.EnableDragGridSize( False )
 		self.m_grid1.SetMargins( 0, 0 )
@@ -58,7 +60,24 @@ class basic_frame ( wx.Frame ):
 
 		# Cell Defaults
 		self.m_grid1.SetDefaultCellAlignment( wx.ALIGN_LEFT, wx.ALIGN_TOP )
-		bSizer21.Add( self.m_grid1, 0, wx.ALL, 5 )
+		bSizerLeft.Add( self.m_grid1, 0, wx.ALL, 5 )
+
+
+		bSizer21.Add( bSizerLeft, 3, wx.EXPAND, 5 )
+
+		bSizerRight = wx.BoxSizer( wx.VERTICAL )
+
+		m_sdbSizer1 = wx.StdDialogButtonSizer()
+		self.m_sdbSizer1OK = wx.Button( self, wx.ID_OK )
+		m_sdbSizer1.AddButton( self.m_sdbSizer1OK )
+		self.m_sdbSizer1Cancel = wx.Button( self, wx.ID_CANCEL )
+		m_sdbSizer1.AddButton( self.m_sdbSizer1Cancel )
+		m_sdbSizer1.Realize();
+
+		bSizerRight.Add( m_sdbSizer1, 1, wx.EXPAND, 5 )
+
+
+		bSizer21.Add( bSizerRight, 1, wx.EXPAND, 5 )
 
 
 		bSizer2.Add( bSizer21, 1, wx.EXPAND, 5 )
