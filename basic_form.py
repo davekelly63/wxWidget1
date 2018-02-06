@@ -32,16 +32,18 @@ class basic_frame ( wx.Frame ):
 
 		bSizerLeft = wx.BoxSizer( wx.VERTICAL )
 
-		self.m_grid1 = wx.grid.Grid( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_grid1 = wx.grid.Grid( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 400,-1 ), 0 )
 
 		# Grid
 		self.m_grid1.CreateGrid( 30, 2 )
-		self.m_grid1.EnableEditing( False )
+		self.m_grid1.EnableEditing( True )
 		self.m_grid1.EnableGridLines( True )
 		self.m_grid1.EnableDragGridSize( False )
 		self.m_grid1.SetMargins( 0, 0 )
 
 		# Columns
+		self.m_grid1.SetColSize( 0, 227 )
+		self.m_grid1.SetColSize( 1, 87 )
 		self.m_grid1.EnableDragColMove( False )
 		self.m_grid1.EnableDragColSize( True )
 		self.m_grid1.SetColLabelSize( 30 )
@@ -49,7 +51,7 @@ class basic_frame ( wx.Frame ):
 		self.m_grid1.SetColLabelValue( 1, u"Visible" )
 		self.m_grid1.SetColLabelAlignment( wx.ALIGN_CENTRE, wx.ALIGN_CENTRE )
 
-		self.m_grid1.SetColFormatBool(1)
+		self.m_grid1.SetColFormatBool (1)
 
 		# Rows
 		self.m_grid1.EnableDragRowSize( True )

@@ -15,7 +15,7 @@ class TestFrame (basic_form.basic_frame):
          if row < 30:
             #print (netlist [row])
             self.m_grid1.SetCellValue(row, 0, netlist[row][1])
-            #self.m_grid1.SetCellValue(row, 1, "1")
+            self.m_grid1.SetCellValue(row, 1, "1")
 
 
 def load_netlist(filename):
