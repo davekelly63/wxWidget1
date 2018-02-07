@@ -20,7 +20,7 @@ class basic_frame ( wx.Frame ):
 	def __init__( self, parent ):
 		wx.Frame.__init__ ( self, parent, id = wx.ID_ANY, title = u"wxWidget Basic Test", pos = wx.DefaultPosition, size = wx.Size( 676,570 ), style = wx.DEFAULT_FRAME_STYLE|wx.TAB_TRAVERSAL )
 
-		self.SetSizeHints( wx.DefaultSize, wx.DefaultSize )
+		# self.SetSizeHints( wx.DefaultSize, wx.DefaultSize )
 
 		bSizer2 = wx.BoxSizer( wx.VERTICAL )
 

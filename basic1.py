@@ -52,7 +52,7 @@ def load_netlist(filename):
 def main ():
    print ('Test basic wxWidget form')
 
-   netlist = load_netlist('d:\\python\\wxWidget1\\STM32_TestBoard1.net')
+   netlist = load_netlist('STM32_TestBoard1.net')
    app = wx.App(False)
 
    frame = TestFrame(None, netlist)
