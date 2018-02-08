@@ -367,11 +367,11 @@
                                         <property name="name">m_sdbSizer1</property>
                                         <property name="permission">protected</property>
                                         <event name="OnApplyButtonClick"></event>
-                                        <event name="OnCancelButtonClick"></event>
+                                        <event name="OnCancelButtonClick">Cancel</event>
                                         <event name="OnContextHelpButtonClick"></event>
                                         <event name="OnHelpButtonClick"></event>
                                         <event name="OnNoButtonClick"></event>
-                                        <event name="OnOKButtonClick"></event>
+                                        <event name="OnOKButtonClick">Ok</event>
                                         <event name="OnSaveButtonClick"></event>
                                         <event name="OnYesButtonClick"></event>
                                     </object>
